@@ -24,11 +24,13 @@ const HeroSection = () => {
       <div className="relative z-20 container mx-auto px-4 sm:px-6 text-center">
         {/* Floating Food Porn Logo */}
         <div className="flex justify-center mb-8">
-           <img 
-             src={foodPornLogo} 
-             alt="Food Porn Logo" 
-             className="w-64 h-64 object-cover float-animation pulse-glow rounded-full"
-           />
+           <button onClick={() => window.open('https://share.google/ab8ULAvA0yMyIn4Ju', '_blank')} className="p-0 m-0">
+             <img 
+               src={foodPornLogo} 
+               alt="Food Porn Logo" 
+               className="w-64 h-64 object-cover float-animation pulse-glow rounded-full"
+             />
+           </button>
         </div>
 
         {/* Removed second logo image per request - keeping only the main floating logo */}

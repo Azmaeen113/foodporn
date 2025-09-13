@@ -91,6 +91,22 @@ const TokenomicsSection = () => {
 
           {/* Right Side - Features & Stats */}
           <div className="space-y-8">
+            {/* Token Details Card (explicit fields requested) */}
+            <div className="glass-card p-6 md:p-8">
+              <h3 className="text-2xl font-bold text-gradient-primary mb-4 text-center">Token Details</h3>
+              <div className="grid grid-cols-1 gap-3 text-sm text-muted-foreground">
+                <div className="flex justify-between"><span className="font-medium">Name</span><span>FOOD PORN</span></div>
+                <div className="flex justify-between"><span className="font-medium">Ticker</span><span>$FP</span></div>
+                <div className="flex justify-between"><span className="font-medium">Blockchain</span><span>SOLANA</span></div>
+                <div className="flex justify-between"><span className="font-medium">Contract Address</span><span className="font-mono text-xs break-all">CTGYoRU9ncbrKvWsLGiZvNACjFedXszDSSY9Nv745mDY</span></div>
+                <div className="flex justify-between"><span className="font-medium">Token Supply</span><span>1,000,000,000</span></div>
+                <div className="flex justify-between"><span className="font-medium">Mint & Freeze</span><span>Revoked</span></div>
+                <div className="flex justify-between"><span className="font-medium">Buy/Sell Tax</span><span>0%</span></div>
+                <div className="flex justify-between"><span className="font-medium">Liquidity</span><span>Locked</span></div>
+                <div className="flex justify-between"><span className="font-medium">LP</span><span>Burned</span></div>
+                <div className="flex justify-between"><span className="font-medium">Contract</span><span>Renounced</span></div>
+              </div>
+            </div>
             {/* Key Stats */}
             <div className="glass-card p-6 md:p-8">
               <h3 className="text-3xl font-bold text-gradient-primary mb-8 text-center">
