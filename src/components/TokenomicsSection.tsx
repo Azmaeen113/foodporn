@@ -4,10 +4,10 @@ const TokenomicsSection = () => {
   const tokenData = [
     {
       icon: Users,
-      label: "Community",
+      label: "Distribution",
       percentage: "100%",
       amount: "1,000,000,000",
-      description: "All tokens distributed to the community",
+      description: "Token distribution as planned",
       color: "from-electric to-neon"
     },
     {
@@ -32,7 +32,7 @@ const TokenomicsSection = () => {
     "🔥 Zero Buy/Sell Tax",
     "🚀 Fair Launch on Solana",
     "💎 LP Burned Forever",
-    "👥 100% Community Owned",
+  "👥 Community Focused",
     "⚡ Solana Fast & Cheap",
     "🛡️ Rugproof Design"
   ];
@@ -153,10 +153,10 @@ const TokenomicsSection = () => {
             <div className="glass-card p-6 md:p-8 text-center">
               <PieChart className="h-16 w-16 mx-auto mb-4 text-orange animate-spin" style={{animationDuration: '10s'}} />
               <h3 className="text-xl font-bold text-gradient-primary mb-2">
-                100% Community Distribution
+                Token Distribution
               </h3>
               <p className="text-muted-foreground">
-                No team tokens, no private sales, just pure food community ownership
+                No team tokens, no private sales — distribution follows the stated allocation.
               </p>
             </div>
           </div>

@@ -10,7 +10,7 @@ const AboutSection = () => {
     {
       icon: Users,
       title: "Community Driven",
-      description: "100% community ownership. No team tokens, no insider allocations."
+      description: "Community-driven approach. No team tokens, no insider allocations."
     },
     {
       icon: Zap,
@@ -43,9 +43,7 @@ const AboutSection = () => {
                 and build a strong community together.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                With zero taxes, complete community ownership, and the backing of the most
-                passionate food lovers, $FP is the place to celebrate food and connect with
-                other members who love sharing delicious moments.
+                With zero taxes and the backing of passionate food lovers, $FP is the place to celebrate food and connect with others who love sharing delicious moments.
               </p>
             </div>
 
