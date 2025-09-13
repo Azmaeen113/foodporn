@@ -35,7 +35,7 @@ const HeroSection = () => {
 
         {/* Main Quote */}
         <p className="text-3xl md:text-6xl font-black text-yellow-400 mb-3 md:mb-4 font-display tracking-tight animate-fade-in-up">
-          "Tariffs were huge... but flavors are BIGGER!"
+          "Flavors take flight — taste the moon with $FP!"
         </p>
         
         <p className="text-base md:text-lg text-muted-foreground mb-8 md:mb-12 max-w-2xl mx-auto animate-fade-in-up">
