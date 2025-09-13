@@ -1,8 +1,20 @@
-import { useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
 
 const ImageSlideshow = () => {
-  // Replaced image slideshow with a single responsive video as requested
+  const videoRef = useRef<HTMLVideoElement | null>(null);
   const videoSrc = "/videooo.mp4";
+
+  useEffect(() => {
+    // Try to play the video programmatically (some browsers require user interaction otherwise).
+    const v = videoRef.current;
+    if (v) {
+      v.play().catch(() => {
+        // If autoplay is blocked, leave it muted and show controls as fallback
+        v.muted = true;
+        v.playsInline = true;
+      });
+    }
+  }, []);
 
   return (
     <section className="relative py-16 bg-background-secondary overflow-hidden">
@@ -23,16 +35,18 @@ const ImageSlideshow = () => {
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          {/* Main Image Display */}
+          {/* Main Video Display */}
           <div className="relative overflow-hidden rounded-2xl shadow-2xl">
             <video
+              ref={videoRef}
               src={videoSrc}
               className="w-full h-96 md:h-[500px] object-cover"
               autoPlay
               muted
               loop
               playsInline
-              controls={false}
+              preload="metadata"
+              poster="/placeholder.svg"
             />
           </div>
         </div>

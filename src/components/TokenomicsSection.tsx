@@ -1,4 +1,5 @@
 import { PieChart, Lock, Users, Flame } from "lucide-react";
+import Illustration from "@/components/Illustration";
 
 const TokenomicsSection = () => {
   const tokenData = [
@@ -51,9 +52,9 @@ const TokenomicsSection = () => {
           <h2 className="text-4xl md:text-6xl font-black font-display text-gradient-gold mb-4 md:mb-6">
             Tokenomics
           </h2>
-          <p className="text-base md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             The most delicious and fair tokenomics in crypto. No hidden allocations, 
-            no team dumps, just pure food community power.
+            no team dumps — transparent allocation and fair launch mechanics.
           </p>
         </div>
 
@@ -91,6 +92,7 @@ const TokenomicsSection = () => {
 
           {/* Right Side - Features & Stats */}
           <div className="space-y-8">
+            <Illustration />
             {/* Token Details Card (explicit fields requested) */}
             <div className="glass-card p-6 md:p-8">
               <h3 className="text-2xl font-bold text-gradient-primary mb-4 text-center">Token Details</h3>
