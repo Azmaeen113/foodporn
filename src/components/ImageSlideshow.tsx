@@ -1,23 +1,21 @@
 import { useState, useEffect } from "react";
 
 const ImageSlideshow = () => {
-  const images = [
-    "/1000358531.jpg",
-    "/1000358532.jpg", 
-    "/1000358533.jpg"
+  const videos = [
+    "/videooo.mp4"
   ];
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => 
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      setCurrentVideoIndex((prevIndex) => 
+        prevIndex === videos.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // Change image every 3 seconds
+    }, 5000); // Change video every 5 seconds
 
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [videos.length]);
 
   return (
     <section className="relative py-16 bg-background-secondary overflow-hidden">
@@ -38,30 +36,33 @@ const ImageSlideshow = () => {
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          {/* Main Image Display */}
+          {/* Main Video Display */}
           <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-            <img 
-              src={images[currentImageIndex]} 
-              alt={`Food Porn Community ${currentImageIndex + 1}`}
+            <video 
+              src={videos[currentVideoIndex]} 
+              autoPlay 
+              muted 
+              loop 
+              playsInline
               className="w-full h-96 md:h-[500px] object-cover transition-all duration-500 ease-in-out"
             />
             
-            {/* Overlay with image counter */}
+            {/* Overlay with video counter */}
             <div className="absolute bottom-4 right-4 bg-black/50 backdrop-blur-sm rounded-lg px-3 py-1">
               <span className="text-white text-sm font-medium">
-                {currentImageIndex + 1} / {images.length}
+                {currentVideoIndex + 1} / {videos.length}
               </span>
             </div>
           </div>
 
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-3 mt-8">
-            {images.map((_, index) => (
+            {videos.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentImageIndex(index)}
+                onClick={() => setCurrentVideoIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentImageIndex 
+                  index === currentVideoIndex 
                     ? 'bg-gradient-to-r from-orange to-yellow scale-125' 
                     : 'bg-white/30 hover:bg-white/50'
                 }`}
@@ -71,8 +72,8 @@ const ImageSlideshow = () => {
 
           {/* Navigation Arrows */}
           <button
-            onClick={() => setCurrentImageIndex(
-              currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1
+            onClick={() => setCurrentVideoIndex(
+              currentVideoIndex === 0 ? videos.length - 1 : currentVideoIndex - 1
             )}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 backdrop-blur-sm hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
           >
@@ -82,8 +83,8 @@ const ImageSlideshow = () => {
           </button>
 
           <button
-            onClick={() => setCurrentImageIndex(
-              currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1
+            onClick={() => setCurrentVideoIndex(
+              currentVideoIndex === videos.length - 1 ? 0 : currentVideoIndex + 1
             )}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 backdrop-blur-sm hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
           >

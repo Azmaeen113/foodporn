@@ -12,13 +12,16 @@ const Index = () => {
       <HeroSection />
       <AboutSection />
       
-      {/* Pre-How to Buy Image Section */}
+      {/* Pre-How to Buy Video Section */}
       <section className="relative py-16 bg-background-secondary">
         <div className="container mx-auto px-6">
           <div className="flex justify-center">
-            <img 
-              src="/1000358531.jpg" 
-              alt="Food Porn Community" 
+            <video 
+              src="/videooo.mp4" 
+              autoPlay 
+              muted 
+              loop 
+              playsInline
               className="max-w-full h-auto rounded-lg shadow-2xl"
             />
           </div>
@@ -30,13 +33,16 @@ const Index = () => {
       <TokenomicsSection />
       <RoadmapSection />
       
-      {/* Pre-Footer Image Section */}
+      {/* Pre-Footer Video Section */}
       <section className="relative py-16 bg-background-secondary">
         <div className="container mx-auto px-6">
           <div className="flex justify-center">
-            <img 
-              src="/1000358533.jpg" 
-              alt="Food Porn Community" 
+            <video 
+              src="/videooo.mp4" 
+              autoPlay 
+              muted 
+              loop 
+              playsInline
               className="max-w-full h-auto rounded-lg shadow-2xl"
             />
           </div>

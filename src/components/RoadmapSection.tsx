@@ -161,6 +161,25 @@ const RoadmapSection = () => {
           </div>
         </div>
 
+        {/* Upcoming Section */}
+        <div className="text-center mt-20 mb-16">
+          <h3 className="text-3xl md:text-4xl font-black font-display text-gradient-primary mb-8">
+            UPCOMING
+          </h3>
+          <div className="max-w-2xl mx-auto space-y-4">
+            <div className="glass-card p-6 border-2 border-red-500/30 hover:border-red-500/50 transition-all duration-300 group">
+              <h4 className="text-xl font-bold text-green-500 group-hover:text-green-400 transition-colors">
+                Marketing
+              </h4>
+            </div>
+            <div className="glass-card p-6 border-2 border-blue-500/30 hover:border-blue-500/50 transition-all duration-300 group">
+              <h4 className="text-xl font-bold text-green-500 group-hover:text-green-400 transition-colors">
+                Major CEX Listing
+              </h4>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom CTA */}
         <div className="text-center mt-20">
           <div className="glass-card p-8 max-w-2xl mx-auto">

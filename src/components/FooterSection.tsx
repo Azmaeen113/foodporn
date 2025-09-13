@@ -115,34 +115,12 @@ const FooterSection = () => {
           </div>
         </div>
 
-        {/* Newsletter Signup */}
-        <div className="glass-card p-8 mb-12">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div>
-              <h3 className="text-2xl font-bold text-gradient-gold mb-2">Stay Updated</h3>
-              <p className="text-muted-foreground">
-                Get the latest food updates and exclusive community perks.
-              </p>
-            </div>
-            <div className="flex w-full md:w-auto gap-3 items-stretch md:items-center">
-              <input 
-                type="email" 
-                placeholder="Enter your email"
-                className="flex-1 md:w-64 px-4 py-3 bg-background/50 border border-white/10 rounded-lg text-white placeholder-muted-foreground focus:outline-none focus:border-orange transition-colors"
-              />
-              <Button className="btn-premium px-6 py-3 self-stretch md:self-auto">
-                <Mail className="mr-2 h-4 w-4" />
-                Subscribe
-              </Button>
-            </div>
-          </div>
-        </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-sm text-muted-foreground">
-              © 2024 Food Porn ($FP). All rights reserved. Made with 🍕 by the community.
+              © 2025 Food Porn ($FP). All rights reserved. Made with 🍕 by the community.
             </div>
             <div className="flex items-center space-x-6 text-sm text-muted-foreground">
               <a href="#" className="hover:text-orange transition-colors">Privacy Policy</a>

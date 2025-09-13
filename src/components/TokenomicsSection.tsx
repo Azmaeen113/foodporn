@@ -1,32 +1,6 @@
-import { PieChart, Lock, Users, Flame } from "lucide-react";
+import { PieChart } from "lucide-react";
 
 const TokenomicsSection = () => {
-  const tokenData = [
-    {
-      icon: Users,
-      label: "Community",
-      percentage: "100%",
-      amount: "1,000,000,000",
-      description: "All tokens distributed to the community",
-      color: "from-electric to-neon"
-    },
-    {
-      icon: Lock,
-      label: "Team/Dev",
-      percentage: "0%",
-      amount: "0",
-      description: "No team allocation, completely fair launch",
-      color: "from-gold to-yellow-400"
-    },
-    {
-      icon: Flame,
-      label: "LP Burned",
-      percentage: "100%",
-      amount: "Forever",
-      description: "Liquidity permanently locked",
-      color: "from-red-500 to-orange-500"
-    }
-  ];
 
   const features = [
     "🔥 Zero Buy/Sell Tax",
@@ -57,39 +31,8 @@ const TokenomicsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-start">
-          {/* Left Side - Token Distribution */}
-          <div className="space-y-8">
-            {tokenData.map((item, index) => (
-              <div key={index} className="glass-card p-5 md:p-6 group hover:scale-[1.02] md:hover:scale-105 transition-all duration-300">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-3 md:space-x-4">
-                    <div className={`p-3 rounded-full bg-gradient-to-r ${item.color}/20 group-hover:${item.color}/30 transition-all`}>
-                      <item.icon className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white">{item.label}</h3>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <div className={`text-xl md:text-2xl font-bold bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}>
-                      {item.percentage}
-                    </div>
-                    <div className="text-sm text-muted-foreground">{item.amount}</div>
-                  </div>
-                </div>
-                <div className="w-full bg-muted/20 rounded-full h-2 overflow-hidden">
-                  <div 
-                    className={`h-full bg-gradient-to-r ${item.color} transition-all duration-1000`}
-                    style={{width: item.percentage}}
-                  ></div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Right Side - Features & Stats */}
+        <div className="max-w-4xl mx-auto">
+          {/* Features & Stats */}
           <div className="space-y-8">
             {/* Key Stats */}
             <div className="glass-card p-6 md:p-8">
