@@ -51,57 +51,59 @@ const HowToBuySection = () => {
         </div>
 
         {/* Steps Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-7xl mx-auto">
           {steps.map((step, index) => (
-            <div key={index} className="relative group">
-              {/* Connection Line */}
+            <div key={index} className="relative group flex flex-col">
+              {/* Connection Line - Only show on large screens */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-orange/50 to-transparent z-0"></div>
+                <div className="hidden lg:block absolute top-20 left-full w-full h-0.5 bg-gradient-to-r from-orange/50 to-transparent z-0 transform translate-x-4"></div>
               )}
               
               {/* Step Card */}
-              <div className="glass-card p-8 text-center relative z-10 group-hover:scale-105 transition-all duration-300">
+              <div className="glass-card p-6 lg:p-8 text-center relative z-10 group-hover:scale-105 transition-all duration-300 flex-1 flex flex-col">
                 {/* Step Number */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-orange to-yellow rounded-full flex items-center justify-center text-black font-bold text-sm">
+                <div className="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-r from-orange to-yellow rounded-full flex items-center justify-center text-black font-bold text-sm z-20">
                   {index + 1}
                 </div>
 
                 {/* Icon */}
-                <div className="mb-6 flex justify-center">
-                  <div className="p-6 rounded-full bg-gradient-to-r from-orange/20 to-yellow/20 group-hover:from-orange/30 group-hover:to-yellow/30 transition-all">
-                    <step.icon className="h-10 w-10 text-orange group-hover:scale-110 transition-transform" />
+                <div className="mb-4 lg:mb-6 flex justify-center">
+                  <div className="p-4 lg:p-6 rounded-full bg-gradient-to-r from-orange/20 to-yellow/20 group-hover:from-orange/30 group-hover:to-yellow/30 transition-all">
+                    <step.icon className="h-8 w-8 lg:h-10 lg:w-10 text-orange group-hover:scale-110 transition-transform" />
                   </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-bold mb-4 text-gradient-primary">{step.title}</h3>
-                <p className="text-muted-foreground leading-relaxed mb-6">{step.description}</p>
+                <h3 className="text-xl lg:text-2xl font-bold mb-3 lg:mb-4 text-gradient-primary">{step.title}</h3>
+                <p className="text-sm lg:text-base text-muted-foreground leading-relaxed mb-4 lg:mb-6 flex-1">{step.description}</p>
 
                 {/* Action Button */}
-                {step.link && (
-                  <Button 
-                    variant="outline" 
-                    className="btn-glass w-full group-hover:bg-orange/10"
-                    onClick={() => window.open(step.link, '_blank')}
-                  >
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    {step.linkText}
-                  </Button>
-                )}
-                
-                {!step.link && (
-                  <Button 
-                    variant="outline" 
-                    className="btn-glass w-full"
-                    onClick={() => {
-                      if (step.linkText === "Join Community") {
-                        window.open('https://t.me/FOODPORNTOKEN', '_blank');
-                      }
-                    }}
-                  >
-                    {step.linkText}
-                  </Button>
-                )}
+                <div className="mt-auto">
+                  {step.link && (
+                    <Button 
+                      variant="outline" 
+                      className="btn-glass w-full group-hover:bg-orange/10 text-sm lg:text-base"
+                      onClick={() => window.open(step.link, '_blank')}
+                    >
+                      <ExternalLink className="mr-2 h-4 w-4" />
+                      {step.linkText}
+                    </Button>
+                  )}
+                  
+                  {!step.link && (
+                    <Button 
+                      variant="outline" 
+                      className="btn-glass w-full text-sm lg:text-base"
+                      onClick={() => {
+                        if (step.linkText === "Join Community") {
+                          window.open('https://t.me/FOODPORNTOKEN', '_blank');
+                        }
+                      }}
+                    >
+                      {step.linkText}
+                    </Button>
+                  )}
+                </div>
               </div>
             </div>
           ))}

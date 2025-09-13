@@ -24,20 +24,25 @@ const HeroSection = () => {
       <div className="relative z-20 container mx-auto px-4 sm:px-6 text-center">
         {/* Floating Food Porn Logo */}
         <div className="flex justify-center mb-8">
-           <button onClick={() => window.open('https://share.google/ab8ULAvA0yMyIn4Ju', '_blank')} className="p-0 m-0">
-             <img 
-               src={foodPornLogo} 
-               alt="Food Porn Logo" 
-               className="w-64 h-64 object-cover float-animation pulse-glow rounded-full"
-             />
-           </button>
+           <img 
+             src={foodPornLogo} 
+             alt="Food Porn Logo" 
+             className="w-64 h-64 object-cover float-animation pulse-glow rounded-full"
+           />
         </div>
 
-        {/* Removed second logo image per request - keeping only the main floating logo */}
+        {/* $FP Logo */}
+        <div className="flex justify-center mb-8">
+          <img 
+            src={fpLogo} 
+            alt="$FP Logo" 
+            className="h-24 md:h-32 object-contain animate-pulse-glow"
+          />
+        </div>
 
         {/* Main Quote */}
         <p className="text-3xl md:text-6xl font-black text-yellow-400 mb-3 md:mb-4 font-display tracking-tight animate-fade-in-up">
-          "Flavors take flight — taste the moon with $FP!"
+          "Tariffs were huge... but flavors are BIGGER!"
         </p>
         
         <p className="text-base md:text-lg text-muted-foreground mb-8 md:mb-12 max-w-2xl mx-auto animate-fade-in-up">

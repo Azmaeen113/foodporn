@@ -1,20 +1,23 @@
-import { useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const ImageSlideshow = () => {
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  const videoSrc = "/videooo.mp4";
+  const images = [
+    "/1000358531.jpg",
+    "/1000358532.jpg", 
+    "/1000358533.jpg"
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
-    // Try to play the video programmatically (some browsers require user interaction otherwise).
-    const v = videoRef.current;
-    if (v) {
-      v.play().catch(() => {
-        // If autoplay is blocked, leave it muted and show controls as fallback
-        v.muted = true;
-        v.playsInline = true;
-      });
-    }
-  }, []);
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   return (
     <section className="relative py-16 bg-background-secondary overflow-hidden">
@@ -35,20 +38,59 @@ const ImageSlideshow = () => {
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          {/* Main Video Display */}
+          {/* Main Image Display */}
           <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-            <video
-              ref={videoRef}
-              src={videoSrc}
-              className="w-full h-96 md:h-[500px] object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              poster="/placeholder.svg"
+            <img 
+              src={images[currentImageIndex]} 
+              alt={`Food Porn Community ${currentImageIndex + 1}`}
+              className="w-full h-96 md:h-[500px] object-cover transition-all duration-500 ease-in-out"
             />
+            
+            {/* Overlay with image counter */}
+            <div className="absolute bottom-4 right-4 bg-black/50 backdrop-blur-sm rounded-lg px-3 py-1">
+              <span className="text-white text-sm font-medium">
+                {currentImageIndex + 1} / {images.length}
+              </span>
+            </div>
           </div>
+
+          {/* Navigation Dots */}
+          <div className="flex justify-center space-x-3 mt-8">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentImageIndex(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentImageIndex 
+                    ? 'bg-gradient-to-r from-orange to-yellow scale-125' 
+                    : 'bg-white/30 hover:bg-white/50'
+                }`}
+              />
+            ))}
+          </div>
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={() => setCurrentImageIndex(
+              currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1
+            )}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 backdrop-blur-sm hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <button
+            onClick={() => setCurrentImageIndex(
+              currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1
+            )}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 backdrop-blur-sm hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
       </div>
     </section>

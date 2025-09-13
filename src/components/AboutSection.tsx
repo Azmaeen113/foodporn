@@ -10,7 +10,7 @@ const AboutSection = () => {
     {
       icon: Users,
       title: "Community Driven",
-      description: "Community-driven approach. No team tokens, no insider allocations."
+      description: "100% community ownership. No team tokens, no insider allocations."
     },
     {
       icon: Zap,
@@ -38,12 +38,13 @@ const AboutSection = () => {
                 The Most Delicious Token in History
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                This is the official meme coin of Solana called Food PORN. Buy and land to the moon.
-                What did you eat for Breakfast / LUNCH / DINNER? Let's share the photo in the community
-                and build a strong community together.
+                $FP isn't just another meme coin - it's the ultimate food community token. 
+                Born from the love of delicious food and sharing culinary experiences, 
+                this token represents the biggest food journey in crypto.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                With zero taxes and the backing of passionate food lovers, $FP is the place to celebrate food and connect with others who love sharing delicious moments.
+                With zero taxes, complete community ownership, and the backing of 
+                the most passionate food lovers, $FP is destined for greatness.
               </p>
             </div>
 
@@ -60,15 +61,15 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* Right Content - Circular Photo for "Most Delicious Token" */}
+          {/* Right Content - Floating Food Collage */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <img
-                src="/food porn.jpg"
-                alt="The Most Delicious Token"
-                className="w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover float-animation rounded-full border-4 border-white/20 shadow-2xl"
+              <img 
+                src="/food.jpg" 
+                alt="Food Porn Community" 
+                className="w-48 h-48 md:w-72 md:h-72 lg:w-160 lg:h-160 object-contain float-animation rounded-2xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-yellow/20 to-orange/20 rounded-full blur-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow/20 to-orange/20 rounded-2xl blur-3xl"></div>
             </div>
           </div>
         </div>

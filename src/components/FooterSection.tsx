@@ -6,10 +6,8 @@ const FooterSection = () => {
   const socialLinks = [
     { icon: Twitter, label: "Twitter", url: "https://x.com/FOODPORNMEME", handle: "@FOODPORNMEME" },
     { icon: MessageCircle, label: "Telegram", url: "https://t.me/FOODPORNTOKEN", handle: "t.me/FOODPORNTOKEN" },
-    { icon: ExternalLink, label: "DEX Screener", url: "https://share.google/ab8ULAvA0yMyIn4Ju", handle: "View" },
-    { icon: ExternalLink, label: "DEXTools", url: "https://share.google/rbFqSHO6cUPwMUimr", handle: "View" },
-    { icon: ExternalLink, label: "Raydium Swap", url: "https://share.google/mmqixiP9AiW68rksE", handle: "Swap" },
-    { icon: ExternalLink, label: "Jupiter", url: "https://share.google/jjoQYzjFC1UCZypDl", handle: "Swap" },
+    { icon: ExternalLink, label: "Raydium", url: "https://raydium.io", handle: "Trade Now" },
+    { icon: ExternalLink, label: "Jupiter", url: "https://jup.ag", handle: "Trade Now" },
     { icon: Globe, label: "Website", url: "#", handle: "foodporn.com" }
   ];
 
@@ -35,9 +33,7 @@ const FooterSection = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-4">
-              <button onClick={() => window.open('https://share.google/ab8ULAvA0yMyIn4Ju', '_blank')} className="p-0 m-0">
-                <img src={fpLogo} alt="$FP Logo" className="h-12 object-contain rounded-lg" />
-              </button>
+              <img src={fpLogo} alt="$FP Logo" className="h-12 object-contain rounded-lg" />
             </div>
             <p className="text-muted-foreground leading-relaxed max-w-md">
               The most delicious token in crypto history. Join millions of food lovers sharing their 

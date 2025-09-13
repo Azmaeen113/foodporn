@@ -12,17 +12,14 @@ const Index = () => {
       <HeroSection />
       <AboutSection />
       
-      {/* Pre-How to Buy Video Section (replaced image with video) */}
+      {/* Pre-How to Buy Image Section */}
       <section className="relative py-16 bg-background-secondary">
         <div className="container mx-auto px-6">
           <div className="flex justify-center">
-            <video
-              src="/videooo.mp4"
-              className="max-w-full h-auto rounded-lg shadow-2xl object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
+            <img 
+              src="/1000358531.jpg" 
+              alt="Food Porn Community" 
+              className="max-w-full h-auto rounded-lg shadow-2xl"
             />
           </div>
         </div>
@@ -33,17 +30,14 @@ const Index = () => {
       <TokenomicsSection />
       <RoadmapSection />
       
-      {/* Pre-Footer Video Section (replaced image with video) */}
+      {/* Pre-Footer Image Section */}
       <section className="relative py-16 bg-background-secondary">
         <div className="container mx-auto px-6">
           <div className="flex justify-center">
-            <video
-              src="/videooo.mp4"
-              className="max-w-full h-auto rounded-lg shadow-2xl object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
+            <img 
+              src="/1000358533.jpg" 
+              alt="Food Porn Community" 
+              className="max-w-full h-auto rounded-lg shadow-2xl"
             />
           </div>
         </div>
