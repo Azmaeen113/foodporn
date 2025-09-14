@@ -5,10 +5,12 @@ import ImageSlideshow from "@/components/ImageSlideshow";
 import TokenomicsSection from "@/components/TokenomicsSection";
 import RoadmapSection from "@/components/RoadmapSection";
 import FooterSection from "@/components/FooterSection";
+import Header from "@/components/Header";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Header />
       <HeroSection />
       <AboutSection />
       

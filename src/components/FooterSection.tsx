@@ -1,6 +1,8 @@
 import { Twitter, MessageCircle, ExternalLink, Mail, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import fpLogo from "/food.jpg";
+import dexImage from "/dexview.jpg";
+import pinksaleImage from "/pinksale.png";
 
 const FooterSection = () => {
   const socialLinks = [
@@ -9,6 +11,21 @@ const FooterSection = () => {
     { icon: ExternalLink, label: "Raydium", url: "https://raydium.io", handle: "Trade Now" },
     { icon: ExternalLink, label: "Jupiter", url: "https://jup.ag", handle: "Trade Now" },
     { icon: Globe, label: "Website", url: "#", handle: "foodporn.com" }
+  ];
+
+  const tradingPlatforms = [
+    { 
+      image: dexImage, 
+      label: "DEXView", 
+      url: "https://dexview.com", 
+      handle: "View Chart" 
+    },
+    { 
+      image: pinksaleImage, 
+      label: "PinkSale", 
+      url: "https://pinksale.finance", 
+      handle: "Launch Platform" 
+    }
   ];
 
   const quickLinks = [
@@ -27,6 +44,40 @@ const FooterSection = () => {
       </div>
 
       <div className="container mx-auto px-6 py-16 relative z-10">
+        {/* Trading Platforms Section */}
+        <div className="text-center mb-16">
+          <h3 className="text-2xl font-bold text-gradient-primary mb-8">Trading Platforms</h3>
+          <div className="flex justify-center space-x-8">
+            {tradingPlatforms.map((platform, index) => (
+              <a
+                key={index}
+                href={platform.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative"
+              >
+                <div className="glass-card p-6 hover:scale-110 transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-orange/20">
+                  <img 
+                    src={platform.image} 
+                    alt={platform.label}
+                    className="w-16 h-16 object-contain group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="mt-3 text-center">
+                    <div className="text-sm font-bold text-white group-hover:text-orange transition-colors">
+                      {platform.label}
+                    </div>
+                    <div className="text-xs text-muted-foreground group-hover:text-orange/70 transition-colors">
+                      {platform.handle}
+                    </div>
+                  </div>
+                </div>
+                {/* Hover glow effect */}
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-orange/20 to-yellow/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl -z-10"></div>
+              </a>
+            ))}
+          </div>
+        </div>
+
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           
